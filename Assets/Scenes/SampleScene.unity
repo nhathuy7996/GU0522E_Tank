@@ -404,6 +404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d258113eef20e4b858caa1dc1a214d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SoundManager: {fileID: 0}
+  player: {fileID: 0}
   _enemyPrefab: {fileID: 5647125400307126096, guid: c69aff343ba0e49abbcab9e42ebfd513, type: 3}
   score_text: {fileID: 2131057767}
   _score: 0

@@ -86,7 +86,7 @@ public class EnemyController : MonoBehaviour
         if (collision.gameObject.tag.Equals("bullet"))
         {
             Destroy(this.gameObject);
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
 
             GameManager.Instant.addScore(1);
         }

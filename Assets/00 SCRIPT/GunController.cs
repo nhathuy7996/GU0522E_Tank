@@ -5,7 +5,6 @@ using UnityEngine;
 public class GunController : MonoBehaviour
 {
     [SerializeField] Transform _firePos;
-    [SerializeField] GameObject _bulletPrefab;
     [SerializeField] float _atkSpeed = 3;
 
     [SerializeField]
@@ -26,11 +25,14 @@ public class GunController : MonoBehaviour
             return;
 
         //Debug.Log(this.transform.localRotation.z);
-        Instantiate(_bulletPrefab, _firePos.position,
-            Quaternion.Euler(0, 0, this.transform.rotation.eulerAngles.z));
+
+        GameObject g = BulletPooling.Instant.getBullet();
+        g.transform.position = _firePos.position;
+        g.transform.rotation = Quaternion.Euler(0, 0, this.transform.rotation.eulerAngles.z);
+        g.SetActive(true);
 
         _timerCountdown = _atkSpeed;
 
-        GameManager.Instant.PlaySound();
+       
     }
 }

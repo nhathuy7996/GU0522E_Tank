@@ -36,10 +36,10 @@ public class GameManager : MonoBehaviour
     Coroutine coroutineSpawE;
 
 
-   public void PlaySound()
-    {
-        SoundManager.PlaySound();
-    }
+    //public void PlaySound()
+    //{
+    //    SoundManager.PlaySound();
+    //}
 
     public Vector2 getPlayerPos()
     {
