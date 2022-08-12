@@ -85,9 +85,9 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("bullet"))
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
             collision.gameObject.SetActive(false);
-
+            SoundManager.Instant.PlaySound("sfx_ui_back");
             GameManager.Instant.addScore(1);
         }
     }

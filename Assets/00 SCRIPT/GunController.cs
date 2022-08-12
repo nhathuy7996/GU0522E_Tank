@@ -5,7 +5,7 @@ using UnityEngine;
 public class GunController : MonoBehaviour
 {
     [SerializeField] Transform _firePos;
-    [SerializeField] float _atkSpeed = 3;
+    [SerializeField] GunData _data;
 
     [SerializeField]
     float _timerCountdown = 0;
@@ -25,13 +25,13 @@ public class GunController : MonoBehaviour
             return;
 
         //Debug.Log(this.transform.localRotation.z);
-
+        SoundManager.Instant.PlaySound("sfx_ui_click");
         GameObject g = BulletPooling.Instant.getBullet();
         g.transform.position = _firePos.position;
         g.transform.rotation = Quaternion.Euler(0, 0, this.transform.rotation.eulerAngles.z);
         g.SetActive(true);
 
-        _timerCountdown = _atkSpeed;
+        _timerCountdown = _data.AtkSpeed;
 
        
     }

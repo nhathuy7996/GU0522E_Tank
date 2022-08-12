@@ -130,4 +130,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _firePos: {fileID: 1973669532055097804}
-  _bulletPrefab: {fileID: 5942604159670346859, guid: 4307cb512248e41c99501a0b311dab45, type: 3}
+  _data: {fileID: 11400000, guid: f46bc7b5057134e5fb74d33aaa07a9ef, type: 2}
+  _timerCountdown: 0

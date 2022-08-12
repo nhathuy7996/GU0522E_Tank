@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d3344347b9642459d271ff7219fd5a, type: 3}
+  m_Name: GunData1
+  m_EditorClassIdentifier: 
+  AtkSpeed: 3
+  Dmg: 10
+  butlletPrefab: {fileID: 5942604159670346859, guid: 4307cb512248e41c99501a0b311dab45, type: 3}

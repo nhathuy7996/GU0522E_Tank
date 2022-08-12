@@ -6,13 +6,14 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D _rb;
     Vector2 _movement;
-    [SerializeField] float _speed = 10;
+    [SerializeField] float _speed => DataManager.Instant.movingSpeed;
     [SerializeField] Transform _rotate_object;
 
     [SerializeField] GameObject obj;
 
     [SerializeField]
     GunController Gun;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +24,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         Moving();
         Look();
 
         if (Input.GetKey(KeyCode.Space))
+        {
             Gun.Fire();
+           
+        }
+           
     }
 
     void Moving()
